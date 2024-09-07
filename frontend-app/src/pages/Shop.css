@@ -1,0 +1,65 @@
+.shop-div{
+  display: flex;  
+  flex-direction: row;
+  justify-content: flex-start; 
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.main-container-filter{
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  gap: 1rem;
+  align-items: center; 
+  gap: 30rem; 
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ .filter-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 11px;
+  flex-wrap: wrap;
+  margin-left: 40px;
+  
+}
+.filter-buttons button{
+ background-color: white;
+  color: goldenrod;
+  padding: 8px 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  cursor: pointer;
+}
+.filter-buttons button.active {
+  background-color: #1674d2;
+  color: white;
+}
+.filter-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem; 
+  border-radius: 0.125rem;
+  margin-top: 0;
+  margin-left: 400px;
+}
+
+
+.icon {
+  color: white; 
+  height: 1rem; 
+  width: 1rem;
+}
+
+.custom-select {
+  background-color: black;
+  color: white;
+  padding: 0.25rem 0.5rem; 
+  border-radius: 0.125rem; 
+  margin-left: 0.5rem;
+}
+

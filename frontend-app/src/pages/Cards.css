@@ -1,0 +1,45 @@
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(4,4fr);
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+    margin-left: 110px;
+}
+.card{
+    width: 300px;
+    height: 340px;
+    background: rgba(220, 218, 218, 0.1);
+    border-radius: 10px; 
+    padding: 1rem; 
+    transition: all 300ms;
+    cursor: pointer;
+}
+.image{
+    width: 50%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+.card:hover{
+    transform: scale(1.10);
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 6px rgba(196, 193, 193, 0.1);
+    border: 1px solid rgba(235, 229, 229, 0.2);
+    color: rgb(46, 45, 45); 
+}
+.product-info{
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem; 
+}
+.product-info h4{
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.product-info-two{
+    display: flex;
+    justify-content: space-between;
+}
