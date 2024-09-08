@@ -39,7 +39,7 @@ const ProductPage = () => {
   }
 
   const handleAddToCart = () => {
-    dispatch(addToCart(product));
+    dispatch(addToCart({ product, quantity }));
   };
 
   const increaseQuantity = ()=>{
