@@ -5,7 +5,7 @@ import Shop from './pages/Shop';
 import Cart from  './pages/Cart';
 import LoginSignUp from  './pages/LoginSignUp';
 import Home from  './pages/Home';
-import ProductPage from './pages/product page/ProductPage';
+import ProductPage from './pages/productpage/ProductPage';
 
 function App() {
   return (
