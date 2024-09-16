@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        rajdhani: ['Rajdhani', 'sans-serif'],
+      },
+      colors: {
+        'navy': '#001F3F',
+      },
+    },
   },
   plugins: [],
 }
