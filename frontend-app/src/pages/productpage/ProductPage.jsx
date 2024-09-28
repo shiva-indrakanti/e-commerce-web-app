@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams,useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../slice/cartslice";
+import { faInstagram, faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBasketShopping,
@@ -11,6 +12,7 @@ import {
   faHeart,
   faStar,
   faStarHalfAlt,
+  faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import "./ProductPage.css";
 
@@ -72,6 +74,7 @@ const ProductPage = () => {
     navigate('/wishlist');
   }
   return (
+    <>
     <div
       className="flex flex-col lg:flex-row justify-center gap-16 h-screen"
       style={{ fontFamily: "'Rajdhani', sans-serif" }}
@@ -271,7 +274,7 @@ const ProductPage = () => {
           {/* Buy and add to cart area starts*/}
           <div className="flex space-x-3 pt-7">
             <button
-              className="bg-yellow-500 text-white py-2 px-4 rounded shadow cursor-pointer"
+              className="bg-yellow-500 text-white py-2 px-4 rounded shadow cursor-pointer transform transition-transform duration-200 hover:scale-105"
               style={{ fontSize: "13px" }}
               onClick={handleBuyClick}
             >
@@ -279,7 +282,7 @@ const ProductPage = () => {
             </button>
 
             <button
-              className="bg-black text-white py-2 px-4 rounded shadow flex items-center cursor-pointer"
+              className="bg-black text-white py-2 px-4 rounded shadow flex items-center cursor-pointer transform transition-transform duration-200 hover:scale-105"
               onClick={handleAddToCart}
               style={{ fontSize: "13px" }}
             >
@@ -288,7 +291,7 @@ const ProductPage = () => {
             </button>
 
             <button
-              className="bg-gray-200 border border-gray-400 text-gray-600 py-2 px-4 rounded flex items-center cursor-pointer hover:text-navy"
+              className="bg-gray-200 border border-gray-400 text-gray-600 py-2 px-4 rounded flex items-center cursor-pointer transform transition-transform duration-200 hover:scale-105 text-navy"
               style={{ fontSize: "13px" }}
               onClick={handleSaveClick}
             >
@@ -300,6 +303,25 @@ const ProductPage = () => {
       </main>
       {/* About Section  ends*/}
     </div>
+    <div className="flex justify-center space-x-8 my-8">
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-600 hover:text-black transition-colors duration-200">
+        <FontAwesomeIcon icon={faInstagram} className="mr-2" />
+        Instagram
+      </a>
+      <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-600 hover:text-black transition-colors duration-200">
+        <FontAwesomeIcon icon={faTwitter} className="mr-2" />
+        Twitter
+      </a>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-600 hover:text-black transition-colors duration-200">
+        <FontAwesomeIcon icon={faFacebook} className="mr-2" />
+        Facebook
+      </a>
+      <a href="/help" className="flex items-center text-gray-600 hover:text-black transition-colors duration-200">
+        <FontAwesomeIcon icon={faQuestionCircle} className="mr-2" />
+        Help
+      </a>
+    </div>
+    </>
   );
 };
 
