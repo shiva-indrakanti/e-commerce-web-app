@@ -14,7 +14,6 @@ import {
   faStarHalfAlt,
   faQuestionCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import "./ProductPage.css";
 
 const ProductPage = () => {
   const { productId } = useParams();

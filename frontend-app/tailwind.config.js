@@ -8,6 +8,7 @@ module.exports = {
       },
       colors: {
         'navy': '#001F3F',
+        'gold': '#E7C967'
       },
     },
   },

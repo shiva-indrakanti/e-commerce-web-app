@@ -1,5 +1,4 @@
 import React from "react";
-import './CartItem.css';
 
 const CartItem = ({
   id,
@@ -7,38 +6,33 @@ const CartItem = ({
   price,
   image,
   quantity,
-  totalPrice,
   onIncrease,
   onDecrease,
-  onRemove,
+  onRemove
 }) => {
   return (
-    <div className="cart-item-container">
-      <div className="cart-item-info">
-        <img src={image} alt={title} className="cart-item-image" />
-        <div className="cart-item-details">
-          <h2 className="cart-item-title">{title}</h2>
-          <div className="cart-item-quantity">
-            <button onClick={() => onDecrease(id)} className="quantity-button">
-              -
-            </button>
-            <span>{quantity}</span>
-            <button onClick={() => onIncrease(id)} className="quantity-button">
-              +
+    <div key={id} className="flex justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start " style={{ height: '200px' }}>
+      <img src={image} alt="product" className="w-40 h-25 object-cover rounded-lg" />
+      <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
+        <div className="mt-5 sm:mt-0">
+          <h2 className="text-lg font-bold text-gray-900">{title}</h2>
+        </div>
+        <div className="mt-4 flex justify-between sm:space-y-10 sm:mt-0 sm:block sm:space-x-4">
+          <div className="flex items-center border-gray-100 mr-0">
+            <span className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-navy hover:text-white" onClick={onDecrease}> - </span>
+            <input className="h-8 w-8 border bg-white text-center text-xs outline-none" type="number" value={quantity} min="1" />
+            <span className="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-navy hover:text-white" onClick={onIncrease}> + </span>
+          </div>
+          <div className="flex items-center space-x-4">
+            <p className="text-base">${price}</p>
+            <button className="font-bold text-gold hover:text-red-500" onClick={() => onRemove(id)}>
+             Remove
             </button>
           </div>
-          <p className="cart-item-price">Price: ${totalPrice.toFixed(2)}</p>
         </div>
       </div>
-
-      {/* Remove Button */}
-      <div className="cart-item-remove">
-        <button onClick={() => onRemove(id)} className="remove-button">
-          Remove
-        </button>
-      </div>
     </div>
-  );
+);
 };
 
 export default CartItem;

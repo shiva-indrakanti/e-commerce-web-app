@@ -38,7 +38,7 @@ const Navbar = () => {
              <input className='search-input' type='text' value={input} placeholder='search' onChange={changeHandler} onKeyDown={handleEnter}/>
            </div>
         <button id='nav-login-button'><Link to='/login' style={{textDecoration:'none', color:'coral'}}>Login</Link></button>
-        <Link to='/cart' ><FaShoppingCart className='cart-icon'  /></Link>
+        <Link to='/checkout/cart' ><FaShoppingCart className='cart-icon'  /></Link>
         <div className="nav-cart-count">25</div>
       </div>
     </div>
