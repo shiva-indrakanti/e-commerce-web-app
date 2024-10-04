@@ -48,7 +48,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="h-screen bg-gray-100 pt-20">
+    <div className="min-h-screen bg-gray-100 pt-20">
       <h1 className="mb-10 text-center text-2xl font-bold">Cart Items</h1>
       {aggregatedItems.length === 0 ? (
         <div className="flex justify-center items-center h-full">

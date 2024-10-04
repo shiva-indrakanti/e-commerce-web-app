@@ -11,7 +11,7 @@ const CartItem = ({
   onRemove
 }) => {
   return (
-    <div key={id} className="flex justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start " style={{ height: '200px' }}>
+    <div key={id} className="flex justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start " style={{ height: '200px' }}  >
       <img src={image} alt="product" className="w-40 h-25 object-cover rounded-lg" />
       <div className="sm:ml-4 sm:flex sm:w-full sm:justify-between">
         <div className="mt-5 sm:mt-0">

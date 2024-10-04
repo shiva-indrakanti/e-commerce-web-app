@@ -22,7 +22,6 @@ const ProductPage = () => {
   const dispatch = useDispatch();
   const [activeImg, setActiveImage] = useState("");
   const [quantity, setQuantity] = useState(1);
-
   const navigate = useNavigate();
   useEffect(() => {
     const REST_URL = `https://fakestoreapi.com/products/${productId}`;

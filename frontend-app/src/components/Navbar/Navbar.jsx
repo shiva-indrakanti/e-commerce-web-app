@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import RowdyLogo from '../Assets/logo/RowdyLogo.jpg';
 import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
 
   const [menu,setMenu] = useState("home");
   const [input,setInput] =useState("");
 
-
+  const cartItems = useSelector(state => state.cart.cartItems);
+  const totalCartQuantity = cartItems.reduce((accumulator, product) => accumulator + product.quantity, 0);
   const changeHandler=(event)=>{
     event.preventDefault();
     setInput(event.target.value);
@@ -39,7 +41,7 @@ const Navbar = () => {
            </div>
         <button id='nav-login-button'><Link to='/login' style={{textDecoration:'none', color:'coral'}}>Login</Link></button>
         <Link to='/checkout/cart' ><FaShoppingCart className='cart-icon'  /></Link>
-        <div className="nav-cart-count">25</div>
+        <div className="nav-cart-count">{totalCartQuantity}</div>
       </div>
     </div>
   )
